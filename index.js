@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.set('view engine', 'ejs');
-
+git
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connect to MongoDB
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 app.post('/item/add', (req, res) => {
   const newItem = new Item({
-    name: req.body.name
+    todo: req.body.todo
   });
 
   newItem.save().then(item => res.redirect('/'));
